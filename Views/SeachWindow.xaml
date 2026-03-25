@@ -1,0 +1,35 @@
+﻿<Window x:Class="Tema_MAP.Views.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Find &amp; Replace" Height="250" Width="400" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Find what:" Grid.Row="0" Grid.Column="0" Margin="0,0,10,10" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding FindText, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1" Margin="0,0,10,10" Height="22"/>
+
+        <TextBlock Text="Replace with:" Grid.Row="1" Grid.Column="0" Margin="0,0,10,10" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding ReplaceText, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" Margin="0,0,10,10" Height="22"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="0,10,0,0">
+            <RadioButton Content="Selected tab" IsChecked="{Binding IsCurrentTabSelected}" Margin="0,0,15,0"/>
+            <RadioButton Content="All tabs" IsChecked="{Binding IsAllTabsSelected}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.RowSpan="4" Grid.Column="2">
+            <Button Content="Find" Command="{Binding FindCommand}" Margin="0,0,0,10" Padding="5"/>
+            <Button Content="Replace" Command="{Binding ReplaceCommand}" Margin="0,0,0,10" Padding="5"/>
+            <Button Content="Replace All" Command="{Binding ReplaceAllCommand}" Margin="0,0,0,10" Padding="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
