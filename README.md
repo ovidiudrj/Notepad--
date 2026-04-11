@@ -6,13 +6,13 @@ It was designed to showcase advanced Windows desktop development concepts, inclu
 
 ## ✨ Key Features
 
-* **🗂️ Workspace Explorer (Lazy Loading):** Integrated TreeView file explorer. Uses a custom Lazy Loading implementation to only read sub-directories when expanded, ensuring high performance even in large projects.
+* **🗂️ Workspace Explorer :** Integrated file explorer. Uses a custom Lazy Loading implementation to only read sub-directories when expanded, ensuring high performance even in large projects.
 * **📑 Multi-Tab Document Management:** Open, edit, and manage multiple files simultaneously using `ObservableCollection`. The app tracks unsaved changes (`IsDirty` state) and safely prompts the user before closing tabs.
 * **🔍 Advanced Search & Replace:** A modeless Search window injected with the main context via Dependency Injection. Supports:
     * Find & Replace (first instance).
     * Replace All (Current Tab).
     * Replace All (Across all open tabs).
-* **💾 Deep File System I/O:** * Recursive directory cloning (Depth-First traversal).
+* **💾 Deep File System I/O:** * Recursive directory cloning.
     * Intelligent collision avoidance (auto-renaming like `new_file_1.txt` to prevent overwriting).
     * Direct interoperability with the Windows OS Clipboard (Copy Path).
 * **⚙️ Custom MVVM Framework:** Implements a boilerplate-free MVVM architecture using a custom `ViewModelBase` (leveraging `INotifyPropertyChanged` and `[CallerMemberName]`) and `RelayCommand` (`ICommand`) for strict separation of concerns.
