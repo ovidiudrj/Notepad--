@@ -1,4 +1,4 @@
-# 📝 Notepad-Clone
+# 📝 Notepad--
 
 A text editor and workspace manager built from scratch using **C#**. This application acts as a lightweight clone of Notepad++. 
 
